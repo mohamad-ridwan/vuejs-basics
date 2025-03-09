@@ -1,3 +1,5 @@
+<!-- SFC / SINGLE FILE COMPONENT -->
+
 <script setup>
 console.info('Hello Vue')
 const hello = "<h1>hello vue</h1>"
