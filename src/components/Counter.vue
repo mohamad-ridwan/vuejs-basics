@@ -1,8 +1,11 @@
 <script setup>
 import { nextTick, ref } from 'vue';
 
+// DEFINE PROPS & ATURAN PROPS
+const props = defineProps(['name', 'initialCount'])
+
 let counter = ref({
-    count: 0,
+    count: props.initialCount,
     name: 'Eko'
 })
 
@@ -23,7 +26,7 @@ async function increment(){
 
 <template>
     <div>
-        <h1 id="count">Counter : {{ counter.count }}</h1>
+        <h1 id="count">Counter {{ props.name }} : {{ counter.count }}</h1>
         <button v-on:click="increment">Increment</button>
     </div>
 </template>
